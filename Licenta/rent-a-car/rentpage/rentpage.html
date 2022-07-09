@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rezerva masina</title>
+    <link rel="stylesheet" href="/rent-a-car/rentpage/rentpage.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"/>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+  </head>
+    <body>
+
+        <header class="header">
+            <a href="/rent-a-car/frontpage.html" class="logo"> <span>Rent</span>-a-car </a>
+            <nav class="navbar"></nav>
+        </header> 
+                <div class="container">
+                    <div class="page-margins">
+                        <div class="car-profile-gallery">
+                            <div class="car-image">
+                                <img id="imgmasina" src="">
+                            </div>
+                            <div class="car-actions">
+                                <div class="carName">
+                                    <h1 id="numemasina"></h1>
+                                </div>
+                                <div class="price">
+                                    <div id="pretmasina" class="price-retail"></div>
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="car-profile">
+                            <form class="form-rent clearfix">
+                            <h2 class="rent-title">Rezerva acum</h2>
+                            <div class="wraper">
+                                <h2>Nume complet*</h2>
+                                <input id="numeComplet" class="input-wraper" type="text" placeholder="" />
+                            </div>
+                            <div class="wraper">
+                                <h2>Email*</h2>
+                                <input
+                                id="emailClient"
+                                class="input-wraper"
+                                type="text"
+                                placeholder="example@example.com"
+                                />
+                            </div>
+                            <div class="wraper">
+                                <h2>Telefon*</h2>
+                                <input
+                                id="telefonClient"
+                                class="input-wraper"
+                                type=""
+                                placeholder="ex: 07000000000"
+                                />
+                            </div>
+                            <div class="wraper">
+                                <h2>De la*</h2>
+                                <input
+                                id="dateStart"
+                                class="input-wraper"
+                                type="date"
+                                placeholder="Select Date"
+                                />
+                            </div>
+                            <div class="wraper">
+                                <h2>Pana la*</h2>
+                                <input
+                                id="dateEnd"
+                                class="input-wraper"
+                                type="date"
+                                placeholder="Select Date"
+                                />
+                            </div>
+                            <div id="pf" class="wraper">
+                                <h1>Total plata</h1>
+                                <h2 id="pret-final"></h2>
+                            </div>
+                            </form>
+
+                            <form class="pay-form">
+                                <div class="payMet">
+                                    <h1>Metode de plata</h1>
+                                </div>
+                                <div class="paymentDiv">
+                                    <div class="cashDiv">
+                                        <input type="radio" id="cash" name="pay-radio">
+                                        <for id="cash">Cash</for>
+                                    </div>
+                                    <div id="cashImg">
+                                        <img src="../image/logoCard/Cash-PNG-Image-Background.png">
+                                    </div>
+                                    <div class="cardDiv">
+                                        <input type="radio" id="card" name="pay-radio">
+                                        <for id="card">Card</for>
+                                    </div>
+                                    <div id="cardImg">
+                                        <img src="../image/logoCard/visa-and-mastercard-logos-logo-visa-png-logo-visa-mastercard-png-visa-logo-white-png-awesome-logos.png">
+                                    </div>
+                                </div>
+                            </form>
+                                <form id="payment" class="payment">
+                                   <div id="payment-container">
+                                    <div id="nrCard" class="wraper">
+                                        <h2>Numar card</h2>
+                                        <input id="numarCard" class="input-wraper" type="tel"  onkeypress='return formats(this,event)' onkeyup="return numberValidation(event)"  placeholder="xxxx xxxx xxxx xxxx" />
+                                    </div>
+                                        <div id="mon-cvv" class="wraper">
+                                            <div id="monthCard" class="wraper">
+                                                <h2>Data de expirare</h2>
+                                                <input
+                                                id="dataCard"
+                                                class="input-wraper"
+                                                type="month"
+                                                />
+                                            </div>
+                                            <div id="cardCVV" class="wraper">
+                                                <h2>CVV</h2>
+                                                <input
+                                                id="cvvCard"
+                                                class="input-wraper"
+                                                type=""
+                                                maxlength="3"
+                                                />
+                                            </div>
+                                        </div>
+                                   </div>
+                                </form>
+                                <div class="button">
+                                    <button type="button" id="selectData" onclick="daysDiff(), sendEmail()" class="btn">TRIMITE</button>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                    
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script>flatpickr("input[type=date]", {minDate: "today"});</script>
+        <script type="module" src="/rent-a-car/rentpage/rentpageFirebase.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+        <script src="rentpage.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    </body>
+    
+</html>

@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root{
+    --yellow:#f9d806;
+    --light-yellow:#63cddb;
+    --black:#000000;
+    --light-color:rgb(0, 0, 0);
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --border:.1rem solid rgba(0,0,0,.1);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    /* outline: none; border:none; */
+    text-decoration: none;
+    /* text-transform: capitalize; */
+    transition: none;
+}
+
+body{
+    display:block;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+    overflow: scroll;
+    overflow-x: hidden;
+    width: 100% !important;
+    height: 100%;
+    
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top:0; left:0; right:0;
+    padding:2rem 9%;
+    z-index: 1000;
+    background: rgb(255, 255, 255);
+}
+
+.header .logo{
+    font-size: 2.5rem;
+    color:var(--black);
+    font-weight: bold;
+}
+
+.header .logo span{
+    color:black;
+}
+
+.header .navbar a{
+    margin:0 1rem;
+    font-size: 1.7rem;
+    color:var(--black);
+}
+
+.header .navbar a:hover{
+    color:var(--yellow);
+}
+
+form{
+    float: left;
+    overflow: hidden;
+    width: 100%;
+    text-align: left;
+    display:block;
+    margin: 1rem 0;
+    padding:0 1em;
+}
+
+form.form-rent .wraper{
+    width: 100%;
+    padding:0rem 1rem 0rem;
+    margin: 0 0 1rem;
+}
+
+form.form-rent .rent-title{
+    text-align: center;
+    font-size: 2rem;
+    margin: auto;
+}
+
+input {
+    width: 100%;
+    color: #000000;
+    font-weight: normal;
+    font-size: 1.3rem;
+    box-shadow: none!important;
+    padding: 0 1rem;
+    background-color: #ffffff;
+    border-radius: 3px!important;
+    height: 4rem;
+    border:solid 1px;
+}
+
+.content{
+    width: 100%;
+}
+
+.car-profile{
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 2rem 0;
+    background: #fff;
+    border-radius: 0.3rem;
+    overflow: hidden;
+}
+.clearfix{
+    clear: both;
+}
+
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+form.form-rent .wraper{
+    width: 30%;
+    padding: 1rem 1rem 0;
+    float: left;
+    margin: 0 0 1rem;
+}
+
+@media (max-width: 991px){
+form.form-rent .wraper{
+    width: 100%;
+}}
+
+.car-profile .button{
+    justify-content: center;
+    display: flex;
+    padding-top: 3%;
+    padding-bottom: 5%;
+    width: 100%;
+    float: left;
+}
+
+button.btn{
+    line-height: inherit;
+}
+
+.btn{
+    width: 17rem;
+    height: 5rem;
+    display: inline-block;
+    color: #fff;
+    position: relative;
+    font-weight: normal;
+    letter-spacing: .5rem;
+    text-indent: 1rem;
+    font-size: 1.2rem;
+    line-height: 3rem;
+    text-transform: uppercase;
+    font-family: 'AvenirRoman', Arial, sans-serif;
+    text-align: center;
+    background: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover{
+    background: #ffffff;
+    color: black;
+}
+
+.page-margins {
+    width: 94%;
+    max-width: 150rem;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    -webkit-transition: width 0.5s ease-out;
+    -moz-transition: width 0.5s ease-out;
+    -o-transition: width 0.5s ease-out;
+    -ms-transition: width 0.5s ease-out;
+    transition: width 0.5s ease-out;
+}
+
+.car-profile-gallery {
+    width: 100%;
+    height: auto;
+    margin: 2rem 0;
+    position: relative;
+    padding: 0 0 3% 0 ;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.car-actions {
+    width: 30%;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+    text-align: center;
+}
+
+.car-profile-gallery .car-actions h1 {
+    font-weight: bold;
+}
+
+.car-actions h1{
+    padding: 5% 0 5% 0;
+}
+
+.price-retail{
+    padding: 0;
+    font-weight: bold;
+    font-size: 2rem;
+    color: #1e104a
+}
+
+.car-profile-gallery .car-image img{
+    width: 50%;
+    height: auto;
+    position: relative;
+    float: right;
+}  
+
+.car-image{
+    width: 100%;
+    position: relative;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    
+}
+
+.wraper-price{
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 5rem;
+    float: center;
+}
+
+@media screen and (max-width: 840px){
+    .car-actions{
+        width:100%;
+        height: auto;
+        position: static;
+        padding: 2rem 2rem 1rem;
+    }
+}
+
+.carName{
+    padding: 1rem 0;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #1e104a;
+    margin-top: 5rem;
+}
+
+@media screen and (max-width: 840px) {
+    .car-image{
+        margin-bottom: 0;
+        width: 100%;
+        height: auto;
+        padding-right: 30%;
+    } 
+    
+}
+
+@media screen and (max-width:840px) {
+    .car-profile-gallery .car-image img{
+        width: 100%;
+        display: inline;
+        padding-bottom: 10%;
+    }
+    
+}
+
+@media screen and (max-width:840px) {
+    .car-profile-gallery .car-image {
+        justify-content: center;
+        display: inline; 
+    }
+    
+    .container{
+      background-image: none !important;
+    }
+
+    .header{
+        padding:1rem;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.container{
+    background-image:url("/rent-a-car/image/25372.png") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+}
+
+form.payMetod .rent-title{
+    text-align: center;
+    font-size: 2rem;
+    margin: auto;
+}
+
+.payment{
+    display: flex;
+    justify-content: center;
+}
+
+.paymentDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5%;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+}
+
+.cardDiv{
+    padding-left: 5%;
+}
+
+.payMet{
+    display:flex;
+    justify-content: center;
+    padding-top: 5%;
+}
+
+.btnPay{
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    
+}
+
+#payment-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#payment-container > div{
+    width: 30%;
+    margin-top: 2%;
+}
+
+#pf{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2%;
+}
+
+#mon-cvv{
+    display: flex;
+    justify-content: space-between;
+}
+
+#cardImg img{
+    width: 100%;
+    max-width: 100px;
+    margin: 30%;
+}
+
+#cashImg img{
+    width: 50%;
+    max-width: 100px;
+    margin: 30%;
+}
+
+@media screen and (max-width: 840px){
+    #payment-container > div{
+        width: 100%;
+    }
+}
+
